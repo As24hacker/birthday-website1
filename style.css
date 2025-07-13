@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to right, #ffe6f0, #fff4f9);
+  overflow-x: hidden;
+  color: #333;
+}
+
+section {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+/* ----------------- Start Button & Welcome ----------------- */
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #ffb6c1, #ffe6f0);
+  text-align: center;
+}
+
+#welcome h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #d63384;
+  text-shadow: 1px 1px #fff;
+}
+
+#startButton {
+  font-size: 22px;
+  padding: 14px 28px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* ----------------- Petals Animation ----------------- */
+.petal {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-image: url('rose.png');
+  background-size: cover;
+  animation: fall 8s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    top: 100%;
+    transform: translateX(100px) rotate(360deg);
+  }
+}
+
+/* ----------------- GIF Section ----------------- */
+.gif-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.gif-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ----------------- Game & Quiz ----------------- */
+#gameArea, #quizArea {
+  background: #fff8fc;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.options button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background: #ffb3d9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button:hover {
+  background: #ff80bf;
+  color: white;
+}
+
+/* ----------------- Cake & Gift ----------------- */
+#cake, #gift {
+  animation: floatUp 2s ease-out;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+#cake img, #gift img {
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ----------------- Popups ----------------- */
+.popup {
+  font-family: 'Pacifico', cursive;
+  font-size: 42px;
+  color: #ff3366;
+  text-shadow: 2px 2px #fff;
+  animation: zoomIn 1s ease;
+  margin: 20px 0;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ----------------- Letters ----------------- */
+.letter-box {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff0f5;
+  border-left: 6px solid #ff69b4;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  font-size: 18px;
+  line-height: 1.8;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.letter-box.show {
+  opacity: 1;
+}
+
+/* ----------------- Responsive ----------------- */
+@media screen and (max-width: 600px) {
+  #startButton {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .letter-box {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .popup {
+    font-size: 32px;
+  }
+
+  .gif-gallery img {
+    width: 120px;
+  }
+}

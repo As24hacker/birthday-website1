@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="cake.png" />
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="song.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- 🌟 Welcome Section -->
+  <section id="welcome" class="active">
+    <h1>🎉 Happy Birthday, My Love! 🎉</h1>
+    <button id="startButton">Start the Surprise</button>
+  </section>
+
+  <!-- 🎮 Game Section -->
+  <section id="game">
+    <h1>🎮 Game Time!</h1>
+    <p>🕹️ How to play: Click the button below to answer some fun quiz questions. Score well to unlock your next surprise!</p>
+    <button id="startQuiz">Start Quiz</button>
+    <div class="gif-gallery">
+      <img src="cute1.gif" alt="Cute GIF 1"/>
+      <img src="cute2.gif" alt="Cute GIF 2"/>
+      <img src="cute3.gif" alt="Cute GIF 3"/>
+      <img src="cute4.gif" alt="Cute GIF 4"/>
+      <img src="cute5.gif" alt="Cute GIF 5"/>
+    </div>
+  </section>
+
+  <!-- ❓ Quiz Section -->
+  <section id="quiz">
+    <h1>💖 Little Quiz for You</h1>
+    <div id="quizContent"></div>
+  </section>
+
+  <!-- 🎂 Cake Section -->
+  <section id="cake">
+    <h1>🎂 Time to Cut the Cake!</h1>
+    <img src="cake.png" alt="Birthday Cake" />
+    <button id="showGift" style="display: none;">🎁 Open Your Gift</button>
+  </section>
+
+  <!-- 🎁 Gift Section -->
+  <section id="gift">
+    <h1>🎁 Your Birthday Gift!</h1>
+    <img src="gift-box.png" alt="Gift Box" />
+  </section>
+
+  <!-- 🎉 Popup: Happy Birthday + I Love You -->
+  <section id="popup">
+    <div class="popup">🎈 Happy Birthday! 🎈</div>
+    <div id="loveYou" class="popup" style="display: none;">❤️ I Love You ❤️</div>
+  </section>
+
+  <!-- 🌹 Petals (added dynamically) -->
+  <div id="petals"></div>
+
+  <!-- 💌 Letters Section -->
+  <section id="letters">
+    <h1 style="font-family: 'Dancing Script', cursive; color: #d63384;">💌 Your Letters 💌</h1>
+  </section>
+
+  <!-- 🎀 More Cute GIFs -->
+  <section id="gifs">
+    <h1>🐥 Just More Cuties 🐥</h1>
+    <div class="gif-gallery">
+      <img src="cute6.gif" alt="Cute GIF 6"/>
+      <img src="cute7.gif" alt="Cute GIF 7"/>
+      <img src="cute8.gif" alt="Cute GIF 8"/>
+      <img src="cute9.gif" alt="Cute GIF 9"/>
+      <img src="cute10.gif" alt="Cute GIF 10"/>
+    </div>
+  </section>
+
+  <!-- Connect the Script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
